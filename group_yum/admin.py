@@ -1,3 +1,5 @@
 from django.contrib import admin
+from group_yum.models import Group, User
 
-# Register your models here.
+admin.site.register(User)
+admin.site.register(Group)
