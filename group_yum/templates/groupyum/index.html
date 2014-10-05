@@ -5,10 +5,84 @@
 <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
 </head>
 
-<div class= "jumbotron">
-    <div class="container">
+<div id="frontBanner" class="jumbotron">
+    <h4 id="login-button">login<h4>
+    <div class = "container">
     <h1>GroupYum</h1>
-    <h2 class = "text-left">cook less, eat more</h2>
+    <h2 class ="text-left">make less, eat more. Join a cooking coop!</h2>
     </div>
  </div>
+<div id = "food-type-question">
+    <h1>What do you like to eat?</h1>
 </div>
+<div id="food-choice-container">
+        <button likes="no" type="button" class="food-type-choose">
+        Vegetarian
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        Vegan
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        Gluten-Free
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        Kosher
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        Thai
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        Chinese
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        Japanese
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        Italian
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        Mexican
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        BBQ
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        French
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        Seafood
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        Indian
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        Greek
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        Middle Eastern
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        Tapas
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        Diner
+        </button>
+        <button likes="no" type="button" class="food-type-choose">
+        Argentinian
+        </button>
+</div>
+
+<script>
+    $("button").click(function() {
+        if($(this).attr('likes')=="no"){
+            $(this).attr('likes',"yes");
+            $(this).css("background-color","black");
+            $(this).css("color","white");
+        }
+        else{
+            $(this).attr('likes',"no");
+            $(this).css("background-color","#E8E8E8");
+            $(this).css("color","black");
+        }
+    });
+</script>
